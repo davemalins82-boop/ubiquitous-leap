@@ -366,7 +366,7 @@ chmod +x /data/on_boot.d/10-blocky-dns.sh
 
 echo "(7/7) Starting and testing service..."
 
-echo.
+echo ""
 echo "... Reloading Daemon..."
 systemctl daemon-reload
 echo "... Enabling Blocky..."
@@ -374,9 +374,9 @@ systemctl enable blocky
 echo "... Starting Blocky..."
 systemctl start blocky
 echo "... Checking Status..."
-systemctl status blocky
+systemctl status blocky -l --no-pager
 
-echo.
+echo ""
 echo "(Complete) - Please check data above to ensure successful install"
 echo "You should REBOOT your Unifi Controller and then check that Blocky is still working"
 echo "Use https://adblock.turtlecute.org/ to test ad blocking"
